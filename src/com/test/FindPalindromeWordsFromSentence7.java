@@ -6,11 +6,9 @@ public class FindPalindromeWordsFromSentence7 {
         String words[] = input.split(" ");
         for (String word: words) {
             if(isPalindrome(word)) {
-
+                System.out.println(word+": is palindrome");
             }
-
         }
-
     }
 
     public static boolean isPalindrome(String input) {
@@ -20,8 +18,8 @@ public class FindPalindromeWordsFromSentence7 {
             if (input.charAt(i) != input.charAt(len)) {
                 return false;
             }
-            i--;
-            len++;
+            i++;
+            len--;
         }
         return true;
     }
